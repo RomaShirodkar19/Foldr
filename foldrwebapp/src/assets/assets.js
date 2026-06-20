@@ -1,5 +1,5 @@
-import dashboard from './dashboard.png';
+import dashboard from './dashboard.jpg';
 
-export const images = {
+export {
     dashboard,
 }
