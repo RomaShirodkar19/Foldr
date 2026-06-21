@@ -1,39 +1,45 @@
 export const features = [
   {
+    iconName: "Upload",
+    iconColour: "text-[#FFBF00]",
+    title: "Easy File Upload",
+    description:
+      "Quickly upload your files with our intuitive drag-and-drop interface.",
+  },
+  {
     iconName: "Shield",
-    iconColour: "text-green-500",
+    iconColour: "text-[#293681]",
     title: "Secure Storage",
-    description: "Your files are encrypted and stored safely",
+    description:
+      "Your files are encrypted and stored securely in our cloud infrastructure.",
   },
   {
     iconName: "Share2",
-    iconColour: "text-blue-500",
-    title: "Easy Sharing",
-    description: "Share files and folders with a single link in seconds",
+    iconColour: "text-[#E05454]",
+    title: "Simple Sharing",
+    description:
+      "Share files with anyone using secure links that you control.",
   },
   {
-    iconName: "FolderTree",
-    iconColour: "text-purple-500",
-    title: "Smart Organization",
-    description: "Keep everything neatly folded into folders and subfolders",
+    iconName: "Wallet",
+    iconColour: "text-[#C13383]",
+    title: "Flexible Storage",
+    description:
+      "Store documents, images, and media with room to grow as your needs expand.",
+  },
+  {
+    iconName: "FolderOpen",
+    iconColour: "text-[#5B7E3C]",
+    title: "File Management",
+    description:
+      "Organize, preview, and manage your files from any device.",
   },
   {
     iconName: "History",
-    iconColour: "text-orange-500",
+    iconColour: "text-[#FDB5CE]",
     title: "Version History",
-    description: "Restore previous versions of any file whenever you need to",
-  },
-  {
-    iconName: "Lock",
-    iconColour: "text-red-500",
-    title: "Access Control",
-    description: "Set granular permissions for every file and folder you share",
-  },
-  {
-    iconName: "Zap",
-    iconColour: "text-yellow-500",
-    title: "Fast Uploads",
-    description: "Upload and sync large files in a fraction of the time",
+    description:
+      "Track changes and restore previous versions whenever needed.",
   },
 ];
 
