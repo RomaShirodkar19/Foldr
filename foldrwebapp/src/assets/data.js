@@ -43,6 +43,51 @@ export const features = [
   },
 ];
 
+// export const pricingPlans = [
+//   {
+//     name: "Free",
+//     price: "0",
+//     description: "Perfect for getting started",
+//     features: [
+//       "5 file uploads",
+//       "Basic file sharing",
+//       "7-day file retention",
+//       "Email support",
+//     ],
+//     cta: "Get Started",
+//     highlighted: false,
+//   },
+//   {
+//     name: "Pro",
+//     price: "9",
+//     description: "For individuals who need more space",
+//     features: [
+//       "Unlimited file uploads",
+//       "Advanced file sharing",
+//       "30-day file retention",
+//       "Priority email support",
+//       "Custom folder permissions",
+//     ],
+//     cta: "Start Free Trial",
+//     highlighted: true,
+//   },
+//   {
+//     name: "Business",
+//     price: "29",
+//     description: "For teams that need to collaborate at scale",
+//     features: [
+//       "Unlimited file uploads",
+//       "Team workspaces",
+//       "Unlimited file retention",
+//       "24/7 priority support",
+//       "Advanced admin controls",
+//       "Audit logs & analytics",
+//     ],
+//     cta: "Contact Sales",
+//     highlighted: false,
+//   },
+// ];
+
 export const pricingPlans = [
   {
     name: "Free",
@@ -58,30 +103,31 @@ export const pricingPlans = [
     highlighted: false,
   },
   {
-    name: "Pro",
-    price: "9",
-    description: "For individuals who need more space",
+    name: "Premium",
+    price: "500",
+    description: "For individuals with larger needs",
     features: [
-      "Unlimited file uploads",
+      "500 file uploads",
       "Advanced file sharing",
       "30-day file retention",
       "Priority email support",
-      "Custom folder permissions",
+      "File analytics",
     ],
-    cta: "Start Free Trial",
+    cta: "Upgrade Now",
     highlighted: true,
+    badge: "Popular",
   },
   {
-    name: "Business",
-    price: "29",
-    description: "For teams that need to collaborate at scale",
+    name: "Ultimate",
+    price: "2500",
+    description: "For teams and businesses",
     features: [
-      "Unlimited file uploads",
-      "Team workspaces",
+      "5000 file uploads",
+      "Team sharing capabilities",
       "Unlimited file retention",
       "24/7 priority support",
-      "Advanced admin controls",
-      "Audit logs & analytics",
+      "Advanced analytics",
+      "API access",
     ],
     cta: "Contact Sales",
     highlighted: false,
