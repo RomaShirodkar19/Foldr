@@ -43,50 +43,6 @@ export const features = [
   },
 ];
 
-// export const pricingPlans = [
-//   {
-//     name: "Free",
-//     price: "0",
-//     description: "Perfect for getting started",
-//     features: [
-//       "5 file uploads",
-//       "Basic file sharing",
-//       "7-day file retention",
-//       "Email support",
-//     ],
-//     cta: "Get Started",
-//     highlighted: false,
-//   },
-//   {
-//     name: "Pro",
-//     price: "9",
-//     description: "For individuals who need more space",
-//     features: [
-//       "Unlimited file uploads",
-//       "Advanced file sharing",
-//       "30-day file retention",
-//       "Priority email support",
-//       "Custom folder permissions",
-//     ],
-//     cta: "Start Free Trial",
-//     highlighted: true,
-//   },
-//   {
-//     name: "Business",
-//     price: "29",
-//     description: "For teams that need to collaborate at scale",
-//     features: [
-//       "Unlimited file uploads",
-//       "Team workspaces",
-//       "Unlimited file retention",
-//       "24/7 priority support",
-//       "Advanced admin controls",
-//       "Audit logs & analytics",
-//     ],
-//     cta: "Contact Sales",
-//     highlighted: false,
-//   },
-// ];
 
 export const pricingPlans = [
   {
@@ -145,7 +101,7 @@ export const testimonials = [
     rating: 5,
   },
   {
-    name: "Michael Chen",
+    name: "Michael Johnson",
     role: "Freelance Designer",
     company: "Self-employed",
     image: "https://randomuser.me/api/portraits/men/46.jpg",
@@ -154,7 +110,7 @@ export const testimonials = [
     rating: 5,
   },
   {
-    name: "Priya Sharma",
+    name: "Blair Thompson",
     role: "Project Manager",
     company: "TechSolutions Ltd.",
     image: "https://randomuser.me/api/portraits/women/65.jpg",
@@ -181,7 +137,7 @@ export const testimonials = [
     rating: 5,
   },
   {
-    name: "James Patel",
+    name: "James Montgomery",
     role: "Software Engineer",
     company: "CodeForge Inc.",
     image: "https://randomuser.me/api/portraits/men/52.jpg",
