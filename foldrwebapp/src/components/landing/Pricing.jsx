@@ -1,6 +1,6 @@
 import { pricingPlans } from "../../assets/data";
 
-const Pricing = () => {
+const Pricing = ({ openSignUp }) => {
   return (
     <div className="py-20 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -44,7 +44,10 @@ const Pricing = () => {
                 ))}
               </ul>
 
-              <button className="mt-8 w-full rounded-lg bg-[#007979] px-4 py-3 text-white">
+              <button 
+                className="mt-8 w-full rounded-lg bg-[#007979] px-4 py-3 text-white cursor-pointer"
+                onClick={() => openSignUp()}
+              >
                 {plan.cta}
               </button>
             </div>

@@ -1,6 +1,6 @@
 import { ArrowRight } from 'lucide-react';
 
-const Cta = () => {
+const Cta = ({ openSignUp }) => {
   return (
     <div className="py-20 bg-black">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -46,6 +46,7 @@ const Cta = () => {
 
           <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
             <button
+              onClick={() => openSignUp()}
               className="
                 group/btn
                 inline-flex items-center gap-2
@@ -53,6 +54,7 @@ const Cta = () => {
                 px-8 py-3.5
                 rounded-full
                 font-semibold
+                cursor-pointer
                 transition-all duration-200
                 hover:bg-[#007979]
                 hover:scale-[1.03]
@@ -66,21 +68,6 @@ const Cta = () => {
               />
             </button>
 
-            <button
-              className="
-                inline-flex items-center gap-2
-                px-8 py-3.5
-                rounded-full
-                font-semibold
-                text-black
-                border border-black/15
-                transition-all duration-200
-                hover:border-black/30
-                hover:bg-black/5
-              "
-            >
-              Talk to sales
-            </button>
           </div>
 
           <p className="mt-8 text-xs text-black/40">

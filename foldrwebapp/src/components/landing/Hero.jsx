@@ -1,6 +1,6 @@
 import dashboard from "../../assets/dashboard.jpg";
 
-const Hero = () => {
+const Hero = ({ openSignIn, openSignUp }) => {
   return (
     <section className="min-h-[50vh] bg-[#FFF0E4] flex items-center justify-center">
       <div className="text-center px-4 py-20">
@@ -18,12 +18,16 @@ const Hero = () => {
         </p>
 
         <div className="mt-8 flex justify-center gap-4">
-          <button className="px-6 py-3 rounded-lg bg-[#007979] text-white font-semibold hover:bg-[#24B1B1] transition">
+          <button
+            onClick={() => openSignUp()}
+            className="px-6 py-3 rounded-lg bg-[#007979] text-white font-semibold cursor-pointer hover:bg-[#24B1B1] transition">
             Get Started
           </button>
 
-          <button className="px-6 py-3 rounded-lg border-2 border-[#007979] text-[#007979] hover:bg-[#FFE0C5] transition">
-            Learn More
+          <button
+            onClick={() => openSignIn()}
+            className="px-6 py-3 rounded-lg border-2 border-[#007979] text-[#007979] cursor-pointer hover:bg-[#FFE0C5] transition">
+            Sign In
           </button>
         </div>
 
