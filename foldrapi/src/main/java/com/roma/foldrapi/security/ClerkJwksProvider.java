@@ -5,7 +5,13 @@ import org.springframework.stereotype.Component;
 import tools.jackson.databind.JsonNode;
 import tools.jackson.databind.ObjectMapper;
 
+import java.math.BigInteger;
+import java.net.URL;
+import java.security.KeyFactory;
 import java.security.PublicKey;
+import java.security.interfaces.RSAPublicKey;
+import java.security.spec.RSAPublicKeySpec;
+import java.util.Base64;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -30,7 +36,44 @@ public class ClerkJwksProvider {
 
     private void refreshKeys() throws Exception {
         ObjectMapper objectMapper = new ObjectMapper();
-        JsonNode jwks = objectMapper.readTree(new java.net.URL(jwksUrl));
+        // Convert JWKS URL string into a URL object
+        URL url = new URL(jwksUrl);
+        // Open connection and get JSON response
+        JsonNode jwks = objectMapper.readTree(url.openStream());
+        // Convert JSON response into JsonNode
+        JsonNode keys = jwks.get("keys");
+
+        for(JsonNode keyNode : keys) {
+            String kid = keyNode.get("kid").asText();
+            String kty = keyNode.get("kty").asText();
+            String alg = keyNode.get("alg").asText();
+
+            if("RSA".equals(kty) && "RS256".equals(alg)) {
+                String n = keyNode.get("n").asText();
+                String e = keyNode.get("e").asText();
+
+                PublicKey publicKey = createPublicKey(n, e);
+
+                keyCache.put(kid, publicKey);
+            }
+        }
+
+        lastFetchTime = System.currentTimeMillis();
+
+    }
+
+    private PublicKey createPublicKey(String modulus, String exponent) throws Exception {
+        byte[] moduleBytes = Base64.getUrlDecoder().decode(modulus);
+        byte[] exponentBytes = Base64.getUrlDecoder().decode(exponent);
+
+        BigInteger modulusBigInt = new BigInteger(1, moduleBytes);
+        BigInteger exponentBigInt = new BigInteger(1, exponentBytes);
+
+        RSAPublicKeySpec spec = new RSAPublicKeySpec(modulusBigInt, exponentBigInt);
+
+        KeyFactory factory = KeyFactory.getInstance("RSA");
+
+        return factory.generatePublic(spec);
 
     }
 
